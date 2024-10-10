@@ -1,0 +1,267 @@
+:root {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('./assets/Poppins-Regular.ttf');
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins';
+  font-size: large;
+  background-image: url(./assets/mountain-background.jpg);
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  color: #FFF;
+  background-color: transparent
+}
+
+.logo-name-header {
+  margin-left: 2em;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.tools-elements-ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+  margin-right: 2em;
+}
+
+.tools-elements-ul li {
+  position: relative;
+  text-align: center;
+}
+
+.tools-elements-ul li a {
+  text-decoration: none;
+  color: #FFF;
+  transition: 0.3s ease;
+}
+
+.button-header-register,
+.button-header-login {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-right: 3em;
+  color: #FFF;
+  font-size: medium;
+  font-family: 'Poppins';
+}
+
+.button-header-login {
+  padding: 0.6em 1em;
+  border: 2px solid #e08dd5;
+  color: #e08dd5;
+}
+
+.button-header-register {
+  color: #e8ceea;
+}
+
+.main-home-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 7%;
+  padding: 2em;
+  text-align: center;
+  position: relative;
+  color: #FFF;
+
+  .h1-main-home-title {
+    font-size: 3em;
+  }
+
+  .h2-main-home-title {
+    font-size: 1.8em;
+  }
+
+  .main-home-button {
+    background-color: #0000002b;
+    font-size: 1.4em;
+    padding: 0.6em 1.6em;
+    margin-top: 1%;
+    border: 4px solid #e17dd4;
+    color: #e17dd4;
+    cursor: pointer;
+    font-weight: 650;
+    transition: 0.3s ease-in-out;
+  }
+
+  .norway-home-title {
+    color: #e17dd4;
+  }
+}
+
+.main-home-title::after {
+  content: '';
+  width: 70vw;
+  height: 60vh;
+  position: absolute;
+  top: -60px;
+  left: 13.5vw;
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  z-index: -1;
+  border-radius: 20px;
+}
+
+
+/*Animations*/
+
+/*Home*/
+
+.home-header::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: -10px;
+  left: 0;
+  background-color: #b130a0;
+}
+
+@keyframes animation-home-header {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    border-radius: 4px;
+    width: 50px;
+  }
+}
+
+.home-header:hover::after {
+  animation: animation-home-header 0.4s forwards;
+}
+
+
+.home-header:hover a,
+.pricing-header:hover a,
+.contact-header:hover a,
+.support-header:hover a {
+  color: #e08dd5;
+  transition: 0.3s ease;
+}
+
+/*Pricing*/
+
+.pricing-header::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: -15px;
+  left: -5px;
+  background-color: #b130a0;
+}
+
+@keyframes animation-pricing-header {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    border-radius: 4px;
+    width: 70px;
+  }
+}
+
+.pricing-header:hover::after {
+  animation: animation-pricing-header 0.4s forwards;
+}
+
+/*Contact*/
+
+.contact-header::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: -15px;
+  left: -8px;
+  background-color: #b130a0;
+}
+
+@keyframes animation-contact-header {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    border-radius: 4px;
+    width: 90px;
+  }
+}
+
+.contact-header:hover::after {
+  animation: animation-contact-header 0.4s forwards;
+}
+
+/*Support*/
+
+.support-header::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: -15px;
+  left: -8px;
+  background-color: #b130a0;
+}
+
+@keyframes animation-support-header {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    border-radius: 4px;
+    width: 80px;
+  }
+}
+
+.support-header:hover::after {
+  animation: animation-support-header 0.4s forwards ease-in-out;
+}
+
+/*Login and Register*/
+
+.button-header-login:hover {
+  background-color: #e08dd5;
+  color: #FFF;
+  transition: 0.3s ease-in-out;
+
+}
+
+.button-header-register:hover {
+  color: #ec80de;
+  transition: 0.4s ease-in-out;
+}
+
+.button-header-register:not(:hover),
+.button-header-login:not(:hover) {
+  transition: 0.4s ease-in-out
+}
+
+/*Check out button on main title*/
+
+.main-home-button:hover {
+  transform: scale(1.1);
+  background-color: #ec80de;
+  color: #FFF;
+  transition: 0.01 ease-in-out;
+}
